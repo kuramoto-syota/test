@@ -1,0 +1,71 @@
+/* settei */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+/* ヘッダー */
+h1 {
+    text-align: center;
+    background-color: #4caf50;
+    color: white;
+    padding: 20px 0;
+    margin: 0;
+}
+/* sutairu */
+h2 {
+    color: #4caf50;
+    margin-top: 20px;
+}
+p, ul, table {
+    margin: 20px;
+}
+ul {
+    list-style-type: square;
+    padding-left: 40px;
+}
+/* teburu */
+table {
+    width: 90%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    background-color: white;
+}
+table, th, td {
+    border: 1px solid #ddd;
+}
+th {
+    background-color: #4caf50;
+    color: white;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+/* sutairu */
+img {
+    display: block;
+    margin: 20px auto;
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+}
+/* rinku */
+a {
+    color: #4caf50;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+/* fomu*/
+iframe {
+    display: block;
+    margin: 20px auto;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
