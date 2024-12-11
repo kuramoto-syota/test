@@ -4,20 +4,20 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    background-color: #173cdf;
     color: #333;
 }
 /* ヘッダー */
 h1 {
     text-align: center;
-    background-color: #4caf50;
-    color: white;
+    background-color: #ff2374;
+    color: rgb(136, 142, 15);
     padding: 20px 0;
     margin: 0;
 }
 /* sutairu */
 h2 {
-    color: #4caf50;
+    color: #20f627;
     margin-top: 20px;
 }
 p, ul, table {
@@ -32,13 +32,13 @@ table {
     width: 90%;
     margin: 20px auto;
     border-collapse: collapse;
-    background-color: white;
+    background-color: rgb(205, 82, 82);
 }
 table, th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #22ffbd;
 }
 th {
-    background-color: #4caf50;
+    background-color: #111f11;
     color: white;
 }
 th, td {
