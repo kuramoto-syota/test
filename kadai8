@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>現在時刻表示アプリ</title>
+    <style>
+        /* settei */
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #3fe930;
+            color: #333;
+        }
+        /* ヘッダー */
+        h1 {
+            text-align: center;
+            background-color: #c14b76;
+            color: rgb(87, 173, 166);
+            padding: 20px 0;
+            margin: 0;
+        }
+        /* sutairu */
+        h2 {
+            color: #408943;
+            margin-top: 20px;
+        }
+        p, ul, table {
+            margin: 20px;
+        }
+        ul {
+            list-style-type: square;
+            padding-left: 40px;
+        }
+        /* teburu */
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: rgb(245, 244, 244);
+        }
+        table, th, td {
+            border: 1px solid #f2f7f6;
+        }
+        th {
+            background-color: #60ab60;
+            color: white;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        /* sutairu */
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+        /* rinku */
+        a {
+            color: #4caf50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* fomu */
+        iframe {
+            display: block;
+            margin: 20px auto;
+            border: none;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .clock, .countdown {
+            text-align: center;
+            margin: 20px;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>現在時刻表示アプリ</h1>
+    <div class="clock" id="clock">現在時刻: </div>
+    
+    <h2>誕生日までのカウントダウン</h2>
+    <div class="countdown" id="countdown">カウントダウン: </div>
+    
+    <script>
+        // 現在時刻を更新する関数
+        function updateTime() {
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('ja-JP');
+            document.getElementById('clock').textContent = '現在時刻: ' + timeString;
+        }
+        
+        // 誕生日までのカウントダウンを更新する関数
+        function updateCountdown() {
+            const birthday = new Date('2025-06-01T00:00:00'); // 誕生日の日付を設定
+            const now = new Date();
+            const diff = birthday - now;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('countdown').textContent = `カウントダウン: ${days}日 ${hours}時間 ${minutes}分 ${seconds}秒`;
+        }
+
+        // 定期的に時間とカウントダウンを更新
+        setInterval(() => {
+            updateTime();
+            updateCountdown();
+        }, 1000);
+        
+        // 初回呼び出し
+        updateTime();
+        updateCountdown();
+    </script>
+</body>
+</html>
